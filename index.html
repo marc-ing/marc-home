@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Marc 的个人主页 - 关于我、项目与联系方式">
+  <title>Marc · 个人主页</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo">Marc<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">关于我</a></li>
+        <li><a href="#projects">项目</a></li>
+        <li><a href="#contact">联系</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 首屏 Hero -->
+  <header class="hero" id="home">
+    <div class="container hero-inner">
+      <p class="hero-greeting">👋 你好，我是</p>
+      <h1 class="hero-name">Marc</h1>
+      <p class="hero-subtitle">全栈开发者 · 开源爱好者 · 终身学习者</p>
+      <p class="hero-bio">
+        我热衷于用代码解决实际问题，喜欢构建优雅、高效的产品。
+        欢迎来到我的个人空间，了解我的工作与思考。
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">查看项目</a>
+        <a href="#contact" class="btn btn-outline">联系我</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 关于我 -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title">关于我</h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-icon">💻</div>
+          <h3>开发</h3>
+          <p>擅长前后端开发，关注代码质量、性能与用户体验。熟悉 JavaScript、TypeScript、Python 等技术栈。</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">🚀</div>
+          <h3>开源</h3>
+          <p>热爱开源社区，喜欢分享和协作，持续在 GitHub 上贡献和发布有趣的项目。</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">📚</div>
+          <h3>学习</h3>
+          <p>保持好奇心，持续学习新技术与最佳实践，相信成长来自不断实践与反思。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 项目 -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <h2 class="section-title">精选项目</h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <h3>项目名称 1</h3>
+          <p>一句话介绍这个项目的亮点、解决的问题或使用的技术。</p>
+          <div class="project-tags">
+            <span>JavaScript</span>
+            <span>Node.js</span>
+          </div>
+          <a href="https://github.com/marc-ing" target="_blank" rel="noopener">查看源码 →</a>
+        </article>
+        <article class="project-card">
+          <h3>项目名称 2</h3>
+          <p>一句话介绍这个项目的亮点、解决的问题或使用的技术。</p>
+          <div class="project-tags">
+            <span>TypeScript</span>
+            <span>React</span>
+          </div>
+          <a href="https://github.com/marc-ing" target="_blank" rel="noopener">查看源码 →</a>
+        </article>
+        <article class="project-card">
+          <h3>项目名称 3</h3>
+          <p>一句话介绍这个项目的亮点、解决的问题或使用的技术。</p>
+          <div class="project-tags">
+            <span>Python</span>
+            <span>FastAPI</span>
+          </div>
+          <a href="https://github.com/marc-ing" target="_blank" rel="noopener">查看源码 →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系 -->
+  <section class="section" id="contact">
+    <div class="container contact-inner">
+      <h2 class="section-title">联系我</h2>
+      <p>无论是合作、交流还是随便聊聊，都欢迎找我 👇</p>
+      <div class="contact-links">
+        <a href="https://github.com/marc-ing" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:you@example.com">Email</a>
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">X / Twitter</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Marc · 用 ❤️ 和代码构建</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
