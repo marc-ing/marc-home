@@ -381,7 +381,7 @@ a {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -418,11 +418,6 @@ a {
   border-radius: 10px;
   color: #6d4aff;
   background: rgba(109, 74, 255, 0.1);
-}
-
-.project-icon-red {
-  color: #e14c67;
-  background: rgba(225, 76, 103, 0.1);
 }
 
 .project-icon-blue {
@@ -486,10 +481,6 @@ a {
 
 .language-dot.rust {
   background: #dea584;
-}
-
-.language-dot.python {
-  background: #3572a5;
 }
 
 .language-dot.css {
