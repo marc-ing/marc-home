@@ -3,118 +3,171 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Marc 的个人主页 - 关于我、项目与联系方式">
-  <title>Marc · 个人主页</title>
+  <meta name="description" content="Marc 的博客 - 记录技术与思考">
+  <title>Marc 的博客 · 记录技术与思考</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- 导航栏 -->
-  <nav class="navbar">
-    <div class="container nav-inner">
-      <a href="#" class="logo">Marc<span>.</span></a>
-      <ul class="nav-links">
-        <li><a href="#about">关于我</a></li>
-        <li><a href="#projects">项目</a></li>
-        <li><a href="#contact">联系</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- 首屏 Hero -->
-  <header class="hero" id="home">
-    <div class="container hero-inner">
-      <p class="hero-greeting">👋 你好，我是</p>
-      <h1 class="hero-name">Marc</h1>
-      <p class="hero-subtitle">全栈开发者 · 开源爱好者 · 终身学习者</p>
-      <p class="hero-bio">
-        我热衷于用代码解决实际问题，喜欢构建优雅、高效的产品。
-        欢迎来到我的个人空间，了解我的工作与思考。
-      </p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">查看项目</a>
-        <a href="#contact" class="btn btn-outline">联系我</a>
-      </div>
+  <!-- 顶部栏 -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">Marc<span>.blog</span></a>
+      <nav class="nav">
+        <a href="#home" class="active">首页</a>
+        <a href="#posts">文章</a>
+        <a href="#about">关于</a>
+        <a href="#contact">联系</a>
+      </nav>
     </div>
   </header>
 
-  <!-- 关于我 -->
-  <section class="section" id="about">
-    <div class="container">
-      <h2 class="section-title">关于我</h2>
-      <div class="about-grid">
-        <div class="about-card">
-          <div class="about-icon">💻</div>
-          <h3>开发</h3>
-          <p>擅长前后端开发，关注代码质量、性能与用户体验。熟悉 JavaScript、TypeScript、Python 等技术栈。</p>
-        </div>
-        <div class="about-card">
-          <div class="about-icon">🚀</div>
-          <h3>开源</h3>
-          <p>热爱开源社区，喜欢分享和协作，持续在 GitHub 上贡献和发布有趣的项目。</p>
-        </div>
-        <div class="about-card">
-          <div class="about-icon">📚</div>
-          <h3>学习</h3>
-          <p>保持好奇心，持续学习新技术与最佳实践，相信成长来自不断实践与反思。</p>
-        </div>
-      </div>
+  <!-- 博客横幅 -->
+  <section class="blog-hero" id="home">
+    <div class="container hero-inner">
+      <h1>记录技术，分享思考</h1>
+      <p>这里是我的技术博客，记录学习、开发与生活的点滴。希望这些文章能对你有帮助。</p>
     </div>
   </section>
 
-  <!-- 项目 -->
-  <section class="section section-alt" id="projects">
-    <div class="container">
-      <h2 class="section-title">精选项目</h2>
-      <div class="project-grid">
-        <article class="project-card">
-          <h3>项目名称 1</h3>
-          <p>一句话介绍这个项目的亮点、解决的问题或使用的技术。</p>
-          <div class="project-tags">
-            <span>JavaScript</span>
-            <span>Node.js</span>
-          </div>
-          <a href="https://github.com/marc-ing" target="_blank" rel="noopener">查看源码 →</a>
-        </article>
-        <article class="project-card">
-          <h3>项目名称 2</h3>
-          <p>一句话介绍这个项目的亮点、解决的问题或使用的技术。</p>
-          <div class="project-tags">
-            <span>TypeScript</span>
-            <span>React</span>
-          </div>
-          <a href="https://github.com/marc-ing" target="_blank" rel="noopener">查看源码 →</a>
-        </article>
-        <article class="project-card">
-          <h3>项目名称 3</h3>
-          <p>一句话介绍这个项目的亮点、解决的问题或使用的技术。</p>
-          <div class="project-tags">
-            <span>Python</span>
-            <span>FastAPI</span>
-          </div>
-          <a href="https://github.com/marc-ing" target="_blank" rel="noopener">查看源码 →</a>
-        </article>
-      </div>
-    </div>
-  </section>
+  <!-- 主体：文章列表 + 侧边栏 -->
+  <main class="container layout" id="posts">
+    <div class="content">
 
-  <!-- 联系 -->
-  <section class="section" id="contact">
-    <div class="container contact-inner">
-      <h2 class="section-title">联系我</h2>
-      <p>无论是合作、交流还是随便聊聊，都欢迎找我 👇</p>
-      <div class="contact-links">
-        <a href="https://github.com/marc-ing" target="_blank" rel="noopener">GitHub</a>
-        <a href="mailto:you@example.com">Email</a>
-        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="#" target="_blank" rel="noopener">X / Twitter</a>
+      <!-- 置顶/精选文章 -->
+      <article class="featured-post">
+        <div class="featured-tag">置顶</div>
+        <h2><a href="#">如何用 GitHub Pages 免费部署个人网站</a></h2>
+        <p class="excerpt">从零开始，一步步教你用 GitHub Pages 托管静态网站，并绑定自定义域名、启用 HTTPS。整个过程只需几分钟。</p>
+        <div class="post-meta">
+          <span class="date">📅 2025-08-17</span>
+          <span class="read-time">☕ 5 分钟阅读</span>
+          <div class="tags">
+            <span>GitHub</span>
+            <span>教程</span>
+            <span>部署</span>
+          </div>
+        </div>
+        <a href="#" class="read-more">阅读全文 →</a>
+      </article>
+
+      <!-- 文章列表 -->
+      <div class="post-list">
+
+        <article class="post-card">
+          <h3><a href="#">现代 JavaScript 开发中的 10 个实用技巧</a></h3>
+          <p class="excerpt">从解构赋值到可选链，这些技巧能让你的代码更简洁、更易读，也能在代码评审中加分。</p>
+          <div class="post-meta">
+            <span class="date">📅 2025-08-10</span>
+            <span class="read-time">☕ 8 分钟阅读</span>
+            <div class="tags">
+              <span>JavaScript</span>
+              <span>前端</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <h3><a href="#">CSS Grid 布局完全指南</a></h3>
+          <p class="excerpt">告别 float 和复杂的定位，用 CSS Grid 轻松实现响应式网格布局，附大量实用示例。</p>
+          <div class="post-meta">
+            <span class="date">📅 2025-07-28</span>
+            <span class="read-time">☕ 10 分钟阅读</span>
+            <div class="tags">
+              <span>CSS</span>
+              <span>布局</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <h3><a href="#">Python 异步编程入门：asyncio 实战</a></h3>
+          <p class="excerpt">理解事件循环、协程与 async/await，用 asyncio 写出高性能的并发程序。</p>
+          <div class="post-meta">
+            <span class="date">📅 2025-07-15</span>
+            <span class="read-time">☕ 12 分钟阅读</span>
+            <div class="tags">
+              <span>Python</span>
+              <span>后端</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <h3><a href="#">我的 2025 年开发工具链分享</a></h3>
+          <p class="excerpt">从编辑器、终端到效率工具，分享我日常开发中使用的高效工具组合。</p>
+          <div class="post-meta">
+            <span class="date">📅 2025-07-02</span>
+            <span class="read-time">☕ 6 分钟阅读</span>
+            <div class="tags">
+              <span>工具</span>
+              <span>效率</span>
+            </div>
+          </div>
+        </article>
+
       </div>
+
+      <!-- 分页 -->
+      <nav class="pagination">
+        <span class="current">1</span>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#" class="next">下一页 →</a>
+      </nav>
     </div>
-  </section>
+
+    <!-- 侧边栏 -->
+    <aside class="sidebar">
+
+      <div class="widget about-widget" id="about">
+        <div class="avatar">M</div>
+        <h3>Marc</h3>
+        <p>全栈开发者，喜欢分享技术、开源与学习心得。欢迎关注我的博客。</p>
+        <a href="https://github.com/marc-ing" target="_blank" rel="noopener" class="btn btn-primary">关注 GitHub</a>
+      </div>
+
+      <div class="widget">
+        <h3 class="widget-title">分类标签</h3>
+        <div class="tag-cloud">
+          <a href="#">JavaScript</a>
+          <a href="#">Python</a>
+          <a href="#">CSS</a>
+          <a href="#">GitHub</a>
+          <a href="#">前端</a>
+          <a href="#">后端</a>
+          <a href="#">教程</a>
+          <a href="#">工具</a>
+          <a href="#">部署</a>
+          <a href="#">效率</a>
+        </div>
+      </div>
+
+      <div class="widget">
+        <h3 class="widget-title">最近更新</h3>
+        <ul class="recent-list">
+          <li><a href="#">如何用 GitHub Pages 免费部署个人网站</a></li>
+          <li><a href="#">现代 JavaScript 开发中的 10 个实用技巧</a></li>
+          <li><a href="#">CSS Grid 布局完全指南</a></li>
+          <li><a href="#">Python 异步编程入门：asyncio 实战</a></li>
+        </ul>
+      </div>
+
+      <div class="widget" id="contact">
+        <h3 class="widget-title">联系我</h3>
+        <div class="contact-links">
+          <a href="https://github.com/marc-ing" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:you@example.com">Email</a>
+          <a href="#" target="_blank" rel="noopener">RSS 订阅</a>
+        </div>
+      </div>
+
+    </aside>
+  </main>
 
   <!-- 页脚 -->
   <footer class="footer">
     <div class="container">
-      <p>© <span id="year"></span> Marc · 用 ❤️ 和代码构建</p>
+      <p>© <span id="year"></span> Marc 的博客 · 用 ❤️ 和代码构建</p>
     </div>
   </footer>
 
