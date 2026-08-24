@@ -6,7 +6,7 @@
   <meta name="description" content="Marc 的博客 - 记录技术与思考">
   <title>Marc 的博客 · 记录技术与思考</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="css/style.css?v=20260817-3">
+  <link rel="stylesheet" href="css/style.css?v=20260824-3">
 </head>
 <body>
   <!-- 顶部栏 -->
@@ -42,7 +42,6 @@
 
           <div class="intro-topics" aria-label="关注领域">
             <span>AI Agents</span>
-            <span>macOS Apps</span>
             <span>Automation</span>
           </div>
         </div>
@@ -66,60 +65,6 @@
         </div>
       </section>
 
-      <!-- 精选项目 -->
-      <section class="projects-section" id="projects" aria-labelledby="projects-title">
-        <div class="section-heading">
-          <div>
-            <span class="section-kicker">Projects</span>
-            <h2 id="projects-title">精选项目</h2>
-          </div>
-          <a href="https://github.com/marc-ing?tab=repositories" target="_blank" rel="noopener noreferrer">
-            查看全部
-            <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-
-        <div class="projects-grid">
-          <article class="project-card project-card-featured">
-            <div class="project-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3" />
-                <path d="m8 12 2.5 2.5L16 9" />
-              </svg>
-            </div>
-            <h3>
-              <a href="https://github.com/marc-ing/open-screen-translate" target="_blank" rel="noopener noreferrer">
-                Open Screen Translate
-              </a>
-            </h3>
-            <p>macOS 屏幕取词与 AI 翻译工具，本地 OCR 识别，兼顾隐私与效率。</p>
-            <div class="project-footer">
-              <span><i class="language-dot rust"></i>Rust</span>
-              <a href="https://github.com/marc-ing/open-screen-translate" target="_blank" rel="noopener noreferrer" aria-label="查看 Open Screen Translate 源码">源码 ↗</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-icon project-icon-blue" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <rect x="3" y="5" width="18" height="14" rx="2" />
-                <path d="M3 9h18M14 14h3" />
-              </svg>
-            </div>
-            <h3>
-              <a href="https://github.com/marc-ing/card-vault-home" target="_blank" rel="noopener noreferrer">
-                卡沃 CardVault
-              </a>
-            </h3>
-            <p>完全离线运行的 iOS 卡片保险箱，在本机安全保存身份证、银行卡的结构化信息与照片。</p>
-            <div class="project-footer">
-              <span><i class="language-dot css"></i>CSS</span>
-              <a href="https://marc-ing.github.io/card-vault-home/" target="_blank" rel="noopener noreferrer" aria-label="访问卡沃 CardVault 产品网站">预览 ↗</a>
-            </div>
-          </article>
-        </div>
-      </section>
-
       <!-- 文章列表 -->
       <div class="section-heading articles-heading" id="articles-heading">
         <div>
@@ -129,6 +74,139 @@
         <button type="button" class="clear-filter" hidden>查看全部</button>
       </div>
       <div class="post-list" id="article-list">
+
+        <article class="post-card post-card-published" data-category="ai-agent">
+          <div class="post-source"><span aria-hidden="true"></span>已发布 · 微信公众号</div>
+          <h3>
+            <a href="https://mp.weixin.qq.com/s/xs2kxY5MRe2rJ5Zd2ZwojA" target="_blank" rel="noopener noreferrer">
+              RAG 已死？回顾 RAG 前世今生 <span class="external-arrow" aria-hidden="true">↗</span>
+            </a>
+          </h3>
+          <p class="excerpt">从 2020 年的原始论文到 Naive、Advanced 与 Modular RAG，再到长上下文和 CAG，梳理 RAG 的演进以及真正被淘汰的部分。</p>
+          <div class="post-meta">
+            <span class="date">📅 2026-08-24</span>
+            <span class="read-time">☕ 9 分钟阅读</span>
+            <div class="tags">
+              <span>RAG</span>
+              <span>长上下文</span>
+              <span>AI</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="post-card post-card-published" data-category="ai-agent">
+          <div class="post-source"><span aria-hidden="true"></span>已发布 · 微信公众号</div>
+          <h3>
+            <a href="https://mp.weixin.qq.com/s/2SK82NMNIesK67Jqu69bXQ" target="_blank" rel="noopener noreferrer">
+              一夜之间，DeepSeek 不再是“最便宜”的那个 <span class="external-arrow" aria-hidden="true">↗</span>
+            </a>
+          </h3>
+          <p class="excerpt">从 DeepSeek 的峰谷定价与缓存涨幅出发，分析 Agent 带来的算力需求，以及大模型行业从价格战走向分层定价的变化。</p>
+          <div class="post-meta">
+            <span class="date">📅 2026-08-23</span>
+            <span class="read-time">☕ 11 分钟阅读</span>
+            <div class="tags">
+              <span>DeepSeek</span>
+              <span>模型定价</span>
+              <span>AI</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="post-card post-card-published" data-category="ai-agent interviews">
+          <div class="post-source"><span aria-hidden="true"></span>已发布 · 微信公众号</div>
+          <h3>
+            <a href="https://mp.weixin.qq.com/s/wFHBCUhrmSt1XDagU-5g0Q" target="_blank" rel="noopener noreferrer">
+              【A16Z】AI Is Crossing the Frontier of Human Knowledge <span class="external-arrow" aria-hidden="true">↗</span>
+            </a>
+          </h3>
+          <p class="excerpt">围绕 OpenAI for Science 负责人 Kevin Weil 的访谈，讨论 AI 如何进入数学、物理与科学发现前沿，把更遥远的研究成果提前带到现实。</p>
+          <div class="post-meta">
+            <span class="date">📅 2026-08-22</span>
+            <span class="read-time">☕ 12 分钟阅读</span>
+            <div class="tags">
+              <span>AI for Science</span>
+              <span>前沿科学</span>
+              <span>访谈</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="post-card post-card-published" data-category="ai-agent">
+          <div class="post-source"><span aria-hidden="true"></span>已发布 · 人人都是产品经理</div>
+          <h3>
+            <a href="https://www.woshipm.com/ai/6452433.html" target="_blank" rel="noopener noreferrer">
+              美团养虾记 <span class="external-arrow" aria-hidden="true">↗</span>
+            </a>
+          </h3>
+          <p class="excerpt">复盘美团十万人参与的全员 Agent 实验：从十万个 Skill、数亿元算力投入，到业务风险和组织学习，观察大厂 AI 转型的得失。</p>
+          <div class="post-meta">
+            <span class="date">📅 2026-08-21</span>
+            <span class="read-time">☕ 10 分钟阅读</span>
+            <div class="tags">
+              <span>Agent</span>
+              <span>组织转型</span>
+              <span>产品分析</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="post-card post-card-published" data-category="ai-agent interviews">
+          <div class="post-source"><span aria-hidden="true"></span>已发布 · 微信公众号</div>
+          <h3>
+            <a href="https://mp.weixin.qq.com/s/Y1gN-6GBLxotYUmVXorjIQ" target="_blank" rel="noopener noreferrer">
+              【A16Z】The Reality of AI-Powered Cyberattacks <span class="external-arrow" aria-hidden="true">↗</span>
+            </a>
+          </h3>
+          <p class="excerpt">结合 a16z 对安全从业者的访谈，分析 AI 如何降低网络攻击门槛，以及密钥泄漏、开源供应链和自动化利用带来的真实风险。</p>
+          <div class="post-meta">
+            <span class="date">📅 2026-08-20</span>
+            <span class="read-time">☕ 10 分钟阅读</span>
+            <div class="tags">
+              <span>AI Security</span>
+              <span>网络安全</span>
+              <span>访谈</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="post-card post-card-published" data-category="ai-agent efficiency-thinking">
+          <div class="post-source"><span aria-hidden="true"></span>已发布 · 微信公众号</div>
+          <h3>
+            <a href="https://mp.weixin.qq.com/s/HoByz1VkjWxeneSS6h77Pw" target="_blank" rel="noopener noreferrer">
+              不会写代码，怎么用 vibe coding 做软件 <span class="external-arrow" aria-hidden="true">↗</span>
+            </a>
+          </h3>
+          <p class="excerpt">面向没有编程经验的创作者，讲清如何从“写代码的人”转向“验收结果的人”，通过明确需求、描述交互和持续测试做出可用软件。</p>
+          <div class="post-meta">
+            <span class="date">📅 2026-08-19</span>
+            <span class="read-time">☕ 12 分钟阅读</span>
+            <div class="tags">
+              <span>Vibe Coding</span>
+              <span>产品实践</span>
+              <span>效率</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="post-card post-card-published" data-category="ai-agent efficiency-thinking">
+          <div class="post-source"><span aria-hidden="true"></span>已发布 · 微信公众号</div>
+          <h3>
+            <a href="https://mp.weixin.qq.com/s/z9d7APXh0VqK5d1eUFzLtw" target="_blank" rel="noopener noreferrer">
+              Code is cheap, show me the MVP <span class="external-arrow" aria-hidden="true">↗</span>
+            </a>
+          </h3>
+          <p class="excerpt">当 AI 让代码生成成本快速下降，真正稀缺的开始变成问题判断、产品选择和可验证的结果。文章重新讨论 MVP 在 AI Coding 时代的意义。</p>
+          <div class="post-meta">
+            <span class="date">📅 2026-08-18</span>
+            <span class="read-time">☕ 11 分钟阅读</span>
+            <div class="tags">
+              <span>AI Coding</span>
+              <span>MVP</span>
+              <span>产品思考</span>
+            </div>
+          </div>
+        </article>
 
         <article class="post-card post-card-published" data-category="ai-agent">
           <div class="post-source"><span aria-hidden="true"></span>已发布 · 人人都是产品经理</div>
@@ -200,6 +278,7 @@
         </div>
 
       </div>
+      <nav class="pagination" aria-label="文章分页" hidden></nav>
     </div>
 
     <!-- 侧边栏 -->
@@ -350,6 +429,59 @@
         </nav>
       </div>
 
+      <div class="widget projects-widget" id="projects">
+        <div class="widget-title-row">
+          <h3 class="widget-title">精选项目</h3>
+          <a href="https://github.com/marc-ing?tab=repositories" target="_blank" rel="noopener noreferrer">
+            查看全部 <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="sidebar-project-list">
+          <article class="sidebar-project-item">
+            <div class="sidebar-project-heading">
+              <span class="project-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3" />
+                  <path d="m8 12 2.5 2.5L16 9" />
+                </svg>
+              </span>
+              <div>
+                <h4>
+                  <a href="https://github.com/marc-ing/open-screen-translate" target="_blank" rel="noopener noreferrer">
+                    Open Screen Translate
+                  </a>
+                </h4>
+                <span class="project-tech"><i class="language-dot rust"></i>Rust</span>
+              </div>
+            </div>
+            <p>macOS 屏幕取词与 AI 翻译工具，本地 OCR 识别，兼顾隐私与效率。</p>
+            <a class="sidebar-project-link" href="https://github.com/marc-ing/open-screen-translate" target="_blank" rel="noopener noreferrer" aria-label="查看 Open Screen Translate 源码">查看源码 ↗</a>
+          </article>
+
+          <article class="sidebar-project-item">
+            <div class="sidebar-project-heading">
+              <span class="project-icon project-icon-blue" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <path d="M3 9h18M14 14h3" />
+                </svg>
+              </span>
+              <div>
+                <h4>
+                  <a href="https://github.com/marc-ing/card-vault-home" target="_blank" rel="noopener noreferrer">
+                    卡沃 CardVault
+                  </a>
+                </h4>
+                <span class="project-tech"><i class="language-dot css"></i>CSS</span>
+              </div>
+            </div>
+            <p>完全离线运行的 iOS 卡片保险箱，在本机安全保存身份证、银行卡信息与照片。</p>
+            <a class="sidebar-project-link" href="https://marc-ing.github.io/card-vault-home/" target="_blank" rel="noopener noreferrer" aria-label="访问卡沃 CardVault 产品网站">在线预览 ↗</a>
+          </article>
+        </div>
+      </div>
+
     </aside>
   </main>
 
@@ -360,6 +492,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20260817-4"></script>
+  <script src="js/main.js?v=20260824-1"></script>
 </body>
 </html>

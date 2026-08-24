@@ -18,7 +18,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
-// 根据右侧内容索引筛选文章
+// 文章分类筛选与分页
 const filterButtons = [...document.querySelectorAll('.content-index button[data-category]')];
 const postCards = [...document.querySelectorAll('.post-list .post-card')];
 const articleList = document.getElementById('article-list');
@@ -28,6 +28,7 @@ const clearFilterButton = document.querySelector('.clear-filter');
 const emptyState = document.querySelector('.post-empty-state');
 const emptyResetButton = document.querySelector('.empty-reset');
 const pagination = document.querySelector('.pagination');
+const pageSize = 6;
 
 if (
   filterButtons.length &&
@@ -37,18 +38,102 @@ if (
   articlesTitle &&
   clearFilterButton &&
   emptyState &&
-  emptyResetButton
+  emptyResetButton &&
+  pagination
 ) {
+  let activeCategory = null;
+  let currentPage = 1;
+
   const refreshList = () => {
     articleList.classList.remove('is-refreshed');
     void articleList.offsetWidth;
     articleList.classList.add('is-refreshed');
   };
 
-  const showAllArticles = ({ scroll = true } = {}) => {
-    postCards.forEach((card) => {
-      card.hidden = false;
+  const getFilteredCards = () => {
+    if (!activeCategory) {
+      return postCards;
+    }
+
+    return postCards.filter((card) => {
+      const categories = (card.dataset.category || '').split(/\s+/);
+      return categories.includes(activeCategory);
     });
+  };
+
+  const createPageButton = (label, page, { className = '', current = false, disabled = false } = {}) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.textContent = label;
+    button.className = className;
+    button.disabled = disabled;
+
+    if (current) {
+      button.classList.add('current');
+      button.setAttribute('aria-current', 'page');
+    } else {
+      button.setAttribute('aria-label', `前往第 ${page} 页`);
+    }
+
+    button.addEventListener('click', () => {
+      currentPage = page;
+      renderArticles({ scroll: true });
+    });
+
+    return button;
+  };
+
+  const renderPagination = (totalPages) => {
+    pagination.replaceChildren();
+
+    if (totalPages <= 1) {
+      pagination.hidden = true;
+      return;
+    }
+
+    pagination.hidden = false;
+    pagination.append(
+      createPageButton('← 上一页', Math.max(1, currentPage - 1), {
+        className: 'previous',
+        disabled: currentPage === 1,
+      }),
+    );
+
+    for (let page = 1; page <= totalPages; page += 1) {
+      pagination.append(createPageButton(String(page), page, { current: page === currentPage }));
+    }
+
+    pagination.append(
+      createPageButton('下一页 →', Math.min(totalPages, currentPage + 1), {
+        className: 'next',
+        disabled: currentPage === totalPages,
+      }),
+    );
+  };
+
+  function renderArticles({ scroll = false } = {}) {
+    const filteredCards = getFilteredCards();
+    const totalPages = Math.max(1, Math.ceil(filteredCards.length / pageSize));
+    currentPage = Math.min(currentPage, totalPages);
+    const pageStart = (currentPage - 1) * pageSize;
+    const visibleCards = filteredCards.slice(pageStart, pageStart + pageSize);
+
+    postCards.forEach((card) => {
+      card.hidden = !visibleCards.includes(card);
+    });
+
+    emptyState.hidden = filteredCards.length > 0;
+    renderPagination(filteredCards.length ? totalPages : 0);
+    refreshList();
+
+    if (scroll) {
+      articlesHeading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  const showAllArticles = ({ scroll = true } = {}) => {
+    activeCategory = null;
+    currentPage = 1;
 
     filterButtons.forEach((button) => {
       button.classList.remove('is-active');
@@ -57,27 +142,14 @@ if (
 
     emptyState.hidden = true;
     clearFilterButton.hidden = true;
-    if (pagination) {
-      pagination.hidden = false;
-    }
     articlesTitle.textContent = '最新文章';
-    refreshList();
-
-    if (scroll) {
-      articlesHeading.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    renderArticles({ scroll });
   };
 
   const filterArticles = (selectedButton) => {
     const { category, label } = selectedButton.dataset;
-    let visibleCount = 0;
-
-    postCards.forEach((card) => {
-      const categories = (card.dataset.category || '').split(/\s+/);
-      const matches = categories.includes(category);
-      card.hidden = !matches;
-      visibleCount += Number(matches);
-    });
+    activeCategory = category;
+    currentPage = 1;
 
     filterButtons.forEach((button) => {
       const isActive = button === selectedButton;
@@ -85,14 +157,9 @@ if (
       button.setAttribute('aria-pressed', String(isActive));
     });
 
-    emptyState.hidden = visibleCount > 0;
     clearFilterButton.hidden = false;
-    if (pagination) {
-      pagination.hidden = true;
-    }
     articlesTitle.textContent = label;
-    refreshList();
-    articlesHeading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    renderArticles({ scroll: true });
   };
 
   filterButtons.forEach((button) => {
@@ -108,4 +175,5 @@ if (
 
   clearFilterButton.addEventListener('click', () => showAllArticles());
   emptyResetButton.addEventListener('click', () => showAllArticles());
+  renderArticles();
 }
