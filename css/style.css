@@ -511,6 +511,10 @@ a {
   background: #563d7c;
 }
 
+.language-dot.typescript {
+  background: #3178c6;
+}
+
 .articles-heading {
   margin-top: 4px;
   scroll-margin-top: 88px;
